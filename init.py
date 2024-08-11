@@ -30,9 +30,9 @@ key=os.getenv('DTB_KEY')
 supabase: Client = create_client(url, key)
 
 # require origin
-ALLOW_ORIGINS = ["http://localhost:5173","http://localhost:5000"]
+ALLOW_ORIGINS = ["http://localhost:5173","http://localhost:5000","https://weather-app-client-b5gf.onrender.com", "https://weather-app-server-pqw9.onrender.com"]
 CORS(app, supports_credentials=True, resources={
     r"/*": {
-        "origins": ["http://localhost:5173","http://localhost:5000"]
+        "origins": ["http://localhost:5173","http://localhost:5000","https://weather-app-client-b5gf.onrender.com", "https://weather-app-server-pqw9.onrender.com"]
     }
 })
